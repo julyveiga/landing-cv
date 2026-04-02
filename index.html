@@ -7,19 +7,19 @@
   <title>Juliana Veiga — Produto & Design Leadership</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">JU Veiga</a>
+  <a href="#hero" class="nav-logo">JV<span>.</span></a>
   <ul class="nav-links">
+    <li><a href="#about">Sobre</a></li>
     <li><a href="#pillars">Como trabalho</a></li>
-    <li><a href="#experience">Experiência</a></li>
     <li><a href="#cases">Cases</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#ai">IA</a></li>
   </ul>
   <a href="mailto:julianavmveiga@gmail.com" class="nav-cta">Vamos conversar</a>
   <div class="nav-burger" id="burger" role="button" aria-label="Menu">
@@ -29,283 +29,297 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#pillars"    class="mobile-link">Como trabalho</a>
-  <a href="#experience" class="mobile-link">Experiência</a>
-  <a href="#cases"      class="mobile-link">Cases</a>
-  <a href="#contact"    class="mobile-link">Contato</a>
+  <a href="#about"   class="mobile-link">Sobre</a>
+  <a href="#pillars" class="mobile-link">Como trabalho</a>
+  <a href="#cases"   class="mobile-link">Cases</a>
+  <a href="#ai"      class="mobile-link">IA</a>
+  <a href="#contact" class="mobile-link">Contato</a>
 </div>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-left reveal">
-    <h1 class="hero-name">JU<br>Veiga</h1>
-    <div class="hero-photo-wrap">
-      <div class="hero-photo-placeholder">
-        <span>Foto</span>
-      </div>
-    </div>
-    <div class="hero-social">
-      <a href="https://linkedin.com/in/juveiga" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:julianavmveiga@gmail.com">Email</a>
-      <a href="#contact">Contato</a>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <p class="hero-label">Produto &amp; Design Leadership</p>
+    <h1 class="hero-name">Juliana<br><em>Veiga</em></h1>
+    <h2 class="hero-headline">Construo organizações de Produto &amp; Design que escalam com IA.</h2>
+    <p class="hero-sub">De zero ao sistema. Da estratégia à execução. Com resultados que ficam.</p>
+    <div class="hero-ctas">
+      <a href="#cases"   class="btn-primary">Conheça meu trabalho</a>
+      <a href="#contact" class="btn-outline">Vamos conversar</a>
     </div>
   </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-  <div class="hero-right reveal">
-    <div class="hero-quote">
-      <span class="hero-quote-mark">"</span>
-      <p class="hero-quote-text">Apaixonada em transformar problemas complexos em soluções com resultados reais.</p>
-    </div>
-
-    <h2 class="hero-section-title">Resumo<br>executivo</h2>
-    <p class="hero-summary">
-      Construo e escalo organizações conectando estratégia à execução, com <strong>impacto em produto, experiência e performance</strong>. Transformo complexidade em sistemas escaláveis por meio de operações e IA.<br><br>
-      Combino <strong>liderança inspiracional com execução direta</strong> para desenvolver times de alta performance e escalar resultados.<br><br>
-      Ao longo da minha trajetória, atuei em empresas globais como <strong>AB InBev, Unico, RD e Natura.</strong>
-    </p>
-
-    <p class="skills-label">Soft Skills</p>
-    <div class="skills-pills">
-      <span class="pill">User Experience</span>
-      <span class="pill">Design System</span>
-      <span class="pill">Web Design</span>
-      <span class="pill">Mobile Design</span>
-      <span class="pill">Prototyping</span>
-      <span class="pill">Testing</span>
-    </div>
-
-    <p class="skills-label">Hard Skills</p>
-    <div class="skills-pills">
-      <span class="pill">Product Strategy</span>
-      <span class="pill">Design Ops</span>
-      <span class="pill">IA Estratégica</span>
-      <span class="pill">CoE Build</span>
-      <span class="pill">Figma MCP</span>
-      <span class="pill">Roadmapping</span>
+<!-- NUMBERS -->
+<section id="numbers">
+  <div class="numbers-inner">
+    <p class="section-label">Resultados</p>
+    <div class="numbers-grid">
+      <div class="number-card reveal">
+        <div class="number-value">2,7→4,1</div>
+        <div class="number-label">Maturidade de Produto</div>
+        <div class="number-context">AB InBev — evolução de índice</div>
+      </div>
+      <div class="number-card reveal">
+        <div class="number-value">94%</div>
+        <div class="number-label">Problemas resolvidos antes da produção</div>
+        <div class="number-context">Experiência capturada upstream</div>
+      </div>
+      <div class="number-card reveal">
+        <div class="number-value">+25</div>
+        <div class="number-label">Anos de transformação digital</div>
+        <div class="number-context">Empresas globais e escala real</div>
+      </div>
+      <div class="number-card reveal">
+        <div class="number-value">4</div>
+        <div class="number-label">Marcas globais estruturadas</div>
+        <div class="number-context">Natura, Avon, The Body Shop, AB InBev</div>
+      </div>
+      <div class="number-card reveal">
+        <div class="number-value">3</div>
+        <div class="number-label">CoEs construídos do zero</div>
+        <div class="number-context">Produto &amp; Design em escala</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- COMO TRABALHO -->
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-visual reveal">
+      <div class="about-placeholder">
+        <div class="about-placeholder-grid"></div>
+        <div class="about-placeholder-ring"></div>
+        <span class="about-placeholder-label">Juliana Veiga<br>São Paulo, Brasil</span>
+      </div>
+      <div class="companies-list">
+        <span class="company-tag">AB InBev</span>
+        <span class="company-tag">Natura</span>
+        <span class="company-tag">Avon</span>
+        <span class="company-tag">The Body Shop</span>
+        <span class="company-tag">Unico</span>
+        <span class="company-tag">RD</span>
+        <span class="company-tag">Raia Drogasil</span>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <h2 class="about-title">Sou a pessoa que entra quando a organização precisa ir para o próximo nível.</h2>
+      <div class="about-body">
+        <p>Construí <strong>CoEs de Produto &amp; Design</strong> em empresas como AB InBev, Unico, RD e Natura. Criei frameworks, elevei maturidade operacional e introduzi IA nos fluxos de trabalho antes de virar tendência.</p>
+        <p>Minha especialidade está na interseção entre <strong>estratégia, design e operações</strong> — onde as decisões são complexas, o impacto é sistêmico e os resultados precisam ser mensuráveis.</p>
+      </div>
+      <div class="about-tags">
+        <span class="tag">Product Leadership</span>
+        <span class="tag">Design Ops</span>
+        <span class="tag">IA Estratégica</span>
+        <span class="tag">CoE Build</span>
+        <span class="tag">Escala Organizacional</span>
+        <span class="tag">Design Systems</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
 <section id="pillars">
-  <div class="section-header reveal">
-    <h2 class="section-heading">Como trabalho</h2>
-    <p class="section-subheading">Quatro princípios que definem minha atuação</p>
-  </div>
-  <div class="pillars-grid">
-    <div class="pillar-card reveal">
-      <div class="pillar-icon-box"></div>
-      <p class="pillar-num">01</p>
-      <h3 class="pillar-title">Sistemas, não soluções pontuais</h3>
-      <p class="pillar-text">Crio estruturas que continuam funcionando quando saio. Frameworks, rituais e cultura — tudo conectado para operar sem dependência.</p>
+  <div class="pillars-inner">
+    <div class="pillars-header reveal">
+      <p class="section-label">Como trabalho</p>
+      <h2 class="section-title">Quatro princípios que definem minha atuação</h2>
     </div>
-    <div class="pillar-card reveal">
-      <div class="pillar-icon-box"></div>
-      <p class="pillar-num">02</p>
-      <h3 class="pillar-title">IA como alavanca estratégica</h3>
-      <p class="pillar-text">Não uso IA para automatizar tarefas. Uso para escalar inteligência organizacional com mais velocidade e consistência.</p>
-    </div>
-    <div class="pillar-card reveal">
-      <div class="pillar-icon-box"></div>
-      <p class="pillar-num">03</p>
-      <h3 class="pillar-title">Execução com visibilidade</h3>
-      <p class="pillar-text">Transformo processos opacos em dashboards, frameworks e decisões rastreáveis, visíveis para todo o negócio.</p>
-    </div>
-    <div class="pillar-card reveal">
-      <div class="pillar-icon-box"></div>
-      <p class="pillar-num">04</p>
-      <h3 class="pillar-title">Times que se desenvolvem</h3>
-      <p class="pillar-text">Liderança que expande capacidade, não cria dependência. Cada time que deixo opera melhor do que quando cheguei.</p>
-    </div>
-  </div>
-</section>
+    <div class="pillars-grid">
 
-<!-- EXPERIÊNCIAS PROFISSIONAIS -->
-<section id="experience">
-  <div class="section-header reveal">
-    <h2 class="section-heading">Experiências<br>Profissionais</h2>
-    <p class="section-subheading">Times de tecnologia focados na criação de produto e experiência.</p>
-  </div>
-  <div class="experience-grid">
+      <div class="pillar-card reveal">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none">
+          <rect x="4" y="4" width="14" height="14" stroke="currentColor" stroke-width="1"/>
+          <rect x="22" y="4" width="14" height="14" stroke="currentColor" stroke-width="1"/>
+          <rect x="4" y="22" width="14" height="14" stroke="currentColor" stroke-width="1"/>
+          <rect x="22" y="22" width="14" height="14" stroke="currentColor" stroke-width="1"/>
+          <line x1="18" y1="11" x2="22" y2="11" stroke="currentColor" stroke-width="1"/>
+          <line x1="11" y1="18" x2="11" y2="22" stroke="currentColor" stroke-width="1"/>
+          <line x1="29" y1="18" x2="29" y2="22" stroke="currentColor" stroke-width="1"/>
+          <line x1="18" y1="29" x2="22" y2="29" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <p class="pillar-num">01</p>
+        <h3 class="pillar-title">Sistemas, não soluções pontuais</h3>
+        <p class="pillar-text">Crio estruturas que continuam funcionando quando saio. Frameworks, rituais, ferramentas e cultura — tudo conectado para operar sem dependência de mim.</p>
+      </div>
 
-    <div class="exp-card reveal">
-      <div class="exp-card-image" style="background:#f97316;">
-        <div class="exp-logo-overlay">
-          <span class="exp-logo-text">AB InBev</span>
-        </div>
+      <div class="pillar-card reveal">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1"/>
+          <path d="M20 6 L20 14 M20 26 L20 34 M6 20 L14 20 M26 20 L34 20" stroke="currentColor" stroke-width="1"/>
+          <circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <p class="pillar-num">02</p>
+        <h3 class="pillar-title">IA como alavanca estratégica</h3>
+        <p class="pillar-text">Não uso IA para automatizar tarefas. Uso para escalar inteligência organizacional — pesquisa, decisão, execução — com mais velocidade e consistência.</p>
       </div>
-      <div class="exp-card-body">
-        <p class="exp-company">AB-INBEV</p>
-        <h3 class="exp-role">Global Head Product &amp; Design (CoE)</h3>
-        <p class="exp-period">Novembro/2023 — Março/2026</p>
+
+      <div class="pillar-card reveal">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none">
+          <line x1="6" y1="32" x2="34" y2="32" stroke="currentColor" stroke-width="1"/>
+          <polyline points="6,24 14,14 20,20 28,8 34,14" stroke="currentColor" stroke-width="1" fill="none"/>
+          <circle cx="6"  cy="24" r="2" fill="currentColor"/>
+          <circle cx="14" cy="14" r="2" fill="currentColor"/>
+          <circle cx="20" cy="20" r="2" fill="currentColor"/>
+          <circle cx="28" cy="8"  r="2" fill="currentColor"/>
+          <circle cx="34" cy="14" r="2" fill="currentColor"/>
+        </svg>
+        <p class="pillar-num">03</p>
+        <h3 class="pillar-title">Execução com visibilidade</h3>
+        <p class="pillar-text">Transformo processos opacos em dashboards, frameworks e decisões rastreáveis. O trabalho de Produto &amp; Design precisa ser visível para todo o negócio.</p>
       </div>
+
+      <div class="pillar-card reveal">
+        <svg class="pillar-icon" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="12" r="5" stroke="currentColor" stroke-width="1"/>
+          <circle cx="10" cy="28" r="4" stroke="currentColor" stroke-width="1"/>
+          <circle cx="30" cy="28" r="4" stroke="currentColor" stroke-width="1"/>
+          <line x1="20" y1="17" x2="10" y2="24" stroke="currentColor" stroke-width="1"/>
+          <line x1="20" y1="17" x2="30" y2="24" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <p class="pillar-num">04</p>
+        <h3 class="pillar-title">Times que se desenvolvem</h3>
+        <p class="pillar-text">Liderança que expande capacidade, não cria dependência. Cada time que deixo para trás opera melhor do que quando cheguei.</p>
+      </div>
+
     </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-card-image" style="background:#8200db;">
-        <div class="exp-logo-overlay">
-          <span class="exp-logo-text">Unico</span>
-        </div>
-      </div>
-      <div class="exp-card-body">
-        <p class="exp-company">UNICO ID TECH</p>
-        <h3 class="exp-role">Design Ops Manager Sr.</h3>
-        <p class="exp-period">Novembro/2022 — Outubro/2023</p>
-      </div>
-    </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-card-image" style="background:#0e1011;">
-        <div class="exp-logo-overlay">
-          <span class="exp-logo-text">Raia &amp; Drogasil</span>
-        </div>
-      </div>
-      <div class="exp-card-body">
-        <p class="exp-company">RAIA &amp; DROGASIL</p>
-        <h3 class="exp-role">Design Ops &amp; System Lead</h3>
-        <p class="exp-period">Janeiro/2021 — Outubro/2022</p>
-      </div>
-    </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-card-image" style="background:#c9a84c;">
-        <div class="exp-logo-overlay">
-          <span class="exp-logo-text">Natura</span>
-        </div>
-      </div>
-      <div class="exp-card-body">
-        <p class="exp-company">NATURA &amp; CO</p>
-        <h3 class="exp-role">Senior Design Lead</h3>
-        <p class="exp-period">Março/2015 — Dezembro/2020</p>
-      </div>
-    </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-card-image" style="background:#22c55e;">
-        <div class="exp-logo-overlay">
-          <span class="exp-logo-text">Iguana Sports</span>
-        </div>
-      </div>
-      <div class="exp-card-body">
-        <p class="exp-company">IGUANA SPORTS</p>
-        <h3 class="exp-role">Head of Design</h3>
-        <p class="exp-period">Janeiro/2013 — Fevereiro/2015</p>
-      </div>
-    </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-card-image" style="background:#3b82f6;">
-        <div class="exp-logo-overlay">
-          <span class="exp-logo-text">Vivo</span>
-        </div>
-      </div>
-      <div class="exp-card-body">
-        <p class="exp-company">VIVO / TELEFÔNICA</p>
-        <h3 class="exp-role">UX Design Specialist</h3>
-        <p class="exp-period">Junho/2010 — Dezembro/2012</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- CASES -->
 <section id="cases">
-  <div class="section-header reveal">
-    <h2 class="section-heading">Cases</h2>
-    <p class="section-subheading">Transformações com contexto e resultado mensurável.</p>
-  </div>
-  <div class="cases-grid">
-
-    <div class="case-card reveal" onclick="openModal('abinbev')">
-      <div class="case-card-image">
-        <div class="case-card-image-bg" style="background:#fff7ed; color:#f97316;">AB InBev</div>
-      </div>
-      <div class="case-card-body">
-        <p class="case-meta">AB-INBEV</p>
-        <h3 class="case-title">Global Head Product &amp; Design (CoE)</h3>
-        <p class="case-period">Novembro/2023 — Março/2026</p>
+  <div class="cases-inner">
+    <div class="cases-header reveal">
+      <div>
+        <p class="section-label">Cases</p>
+        <h2 class="section-title">Transformações com contexto e número</h2>
       </div>
     </div>
+    <div class="cases-grid">
 
-    <div class="case-card reveal" onclick="openModal('natura')">
-      <div class="case-card-image">
-        <div class="case-card-image-bg" style="background:#fdf4e7; color:#c9a84c;">Natura</div>
+      <div class="case-card reveal" onclick="openModal('abinbev')">
+        <p class="case-company">AB InBev</p>
+        <h3 class="case-challenge">Criar CoE global de Produto &amp; Design para Zé Delivery e TaDa</h3>
+        <ul class="case-bullets">
+          <li>Estruturação do CoE do zero para operações em múltiplos países</li>
+          <li>Introdução de IA nos fluxos de content e visual</li>
+          <li>Framework de maturidade de produto criado e implementado</li>
+        </ul>
+        <div class="case-result">Maturidade 2,7 → 4,1 em 18 meses</div>
+        <button class="case-cta">
+          Ver detalhes
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
       </div>
-      <div class="case-card-body">
-        <p class="case-meta">NATURA &amp; CO</p>
-        <h3 class="case-title">Design System para 3 marcas globais</h3>
-        <p class="case-period">Março/2015 — Dezembro/2020</p>
+
+      <div class="case-card reveal" onclick="openModal('natura')">
+        <p class="case-company">Natura</p>
+        <h3 class="case-challenge">Escalar Design System para 3 marcas globais ao longo de 6 anos</h3>
+        <ul class="case-bullets">
+          <li>Design System unificado para Natura, Avon e The Body Shop</li>
+          <li>Time de Design Ops estruturado e operando de forma autônoma</li>
+          <li>Processos de pesquisa centralizados com plataforma de IA</li>
+        </ul>
+        <div class="case-result">3 marcas globais com linguagem visual consistente</div>
+        <button class="case-cta">
+          Ver detalhes
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
       </div>
+
+      <div class="case-card reveal" onclick="openModal('unico')">
+        <p class="case-company">Unico</p>
+        <h3 class="case-challenge">Estruturar Design Ops do zero em idtech de alta escala</h3>
+        <ul class="case-bullets">
+          <li>Área de Design Operations criada sem estrutura prévia</li>
+          <li>Ways of Working com IA tornando o upstream mensurável</li>
+          <li>Processos de discovery integrados ao ciclo de produto</li>
+        </ul>
+        <div class="case-result">94% dos problemas de experiência resolvidos pré-produção</div>
+        <button class="case-cta">
+          Ver detalhes
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="case-card reveal" onclick="openModal('rd')">
+        <p class="case-company">Raia Drogasil</p>
+        <h3 class="case-challenge">Criar área de Design Operations no maior varejo farmacêutico do Brasil</h3>
+        <ul class="case-bullets">
+          <li>Primeira área de Design Operations da empresa</li>
+          <li>Framework de entrega criado para conectar Design ao roadmap</li>
+          <li>Rituais de liderança e governança de design implementados</li>
+        </ul>
+        <div class="case-result">Operação de design escalável em empresa com +2.500 lojas</div>
+        <button class="case-cta">
+          Ver detalhes
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
     </div>
-
-    <div class="case-card reveal" onclick="openModal('unico')">
-      <div class="case-card-image">
-        <div class="case-card-image-bg" style="background:#faf5ff; color:#8200db;">Unico</div>
-      </div>
-      <div class="case-card-body">
-        <p class="case-meta">UNICO ID TECH</p>
-        <h3 class="case-title">Design Ops do zero em idtech de alta escala</h3>
-        <p class="case-period">Novembro/2022 — Outubro/2023</p>
-      </div>
-    </div>
-
-    <div class="case-card reveal" onclick="openModal('rd')">
-      <div class="case-card-image">
-        <div class="case-card-image-bg" style="background:#f0fdf4; color:#16a34a;">RD</div>
-      </div>
-      <div class="case-card-body">
-        <p class="case-meta">RAIA DROGASIL</p>
-        <h3 class="case-title">Design Operations no maior varejo farmacêutico do Brasil</h3>
-        <p class="case-period">Janeiro/2021 — Outubro/2022</p>
-      </div>
-    </div>
-
-    <div class="case-card reveal" onclick="openModal('abinbev')">
-      <div class="case-card-image">
-        <div class="case-card-image-bg" style="background:#eff6ff; color:#2563eb;">IA Hub</div>
-      </div>
-      <div class="case-card-body">
-        <p class="case-meta">AB-INBEV</p>
-        <h3 class="case-title">Hub de IA para Content &amp; Visual em escala global</h3>
-        <p class="case-period">2024 — 2025</p>
-      </div>
-    </div>
-
-    <div class="case-card reveal" onclick="openModal('unico')">
-      <div class="case-card-image">
-        <div class="case-card-image-bg" style="background:#fff1f2; color:#e11d48;">Research</div>
-      </div>
-      <div class="case-card-body">
-        <p class="case-meta">UNICO ID TECH</p>
-        <h3 class="case-title">Plataforma de pesquisa com IA para centralizar insights</h3>
-        <p class="case-period">2022 — 2023</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CERTIFICAÇÕES -->
-<section id="certifications">
-  <div class="section-header reveal">
-    <h2 class="section-heading">Principais<br>Certificações</h2>
-    <p class="section-subheading">Formação contínua em produto, design e estratégia.</p>
-  </div>
-  <div class="cert-logos">
-    <div class="cert-logo reveal" style="background:#f97316; color:#fff; font-family:'Anton SC',sans-serif; font-size:1.2rem; letter-spacing:0.05em; text-transform:uppercase; display:flex; align-items:center; justify-content:center;">Google</div>
-    <div class="cert-logo reveal" style="background:#8200db; color:#fff; font-family:'Anton SC',sans-serif; font-size:1.2rem; letter-spacing:0.05em; text-transform:uppercase; display:flex; align-items:center; justify-content:center;">IDEO</div>
-    <div class="cert-logo reveal" style="background:#0e1011; color:#fff; font-family:'Anton SC',sans-serif; font-size:1.2rem; letter-spacing:0.05em; text-transform:uppercase; display:flex; align-items:center; justify-content:center;">MIT</div>
-    <div class="cert-logo reveal" style="background:#c9a84c; color:#fff; font-family:'Anton SC',sans-serif; font-size:1.2rem; letter-spacing:0.05em; text-transform:uppercase; display:flex; align-items:center; justify-content:center;">ESPM</div>
   </div>
 </section>
 
-<!-- CONTATO -->
+<!-- AI -->
+<section id="ai">
+  <div class="ai-inner">
+    <div class="ai-header reveal">
+      <div>
+        <p class="section-label">IA na prática</p>
+        <h2 class="section-title">O diferencial que muda a velocidade do sistema</h2>
+      </div>
+      <blockquote class="ai-quote">
+        "IA não é o destino. É o que permite chegar mais longe, mais rápido, com mais consistência."
+      </blockquote>
+    </div>
+    <div class="ai-grid">
+      <div class="ai-card reveal">
+        <p class="ai-card-num">01</p>
+        <h3 class="ai-card-title">Hub de IA para Content e Visual</h3>
+        <p class="ai-card-text">Criado para AB InBev — plataforma centralizada que escala produção de conteúdo e assets visuais com consistência de marca globalmente.</p>
+      </div>
+      <div class="ai-card reveal">
+        <p class="ai-card-num">02</p>
+        <h3 class="ai-card-title">Plataforma de pesquisa com IA</h3>
+        <p class="ai-card-text">Centralização de insights de usuário via IA — reduz tempo de síntese e garante que o conhecimento organizacional não se perde entre sprints.</p>
+      </div>
+      <div class="ai-card reveal">
+        <p class="ai-card-num">03</p>
+        <h3 class="ai-card-title">Ways of Working com IA</h3>
+        <p class="ai-card-text">Processos upstream redesenhados para incorporar IA — tornando discovery, priorização e alinhamento mensuráveis e rastreáveis.</p>
+      </div>
+      <div class="ai-card reveal">
+        <p class="ai-card-num">04</p>
+        <h3 class="ai-card-title">Figma MCP + Cursor AI</h3>
+        <p class="ai-card-text">Fluxo de design aumentado — design e código em sincronismo real via MCP, comprimindo o ciclo de entrega de semanas para horas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <div class="reveal">
-      <p class="contact-label">Contato</p>
-      <h2 class="contact-headline">Se você está construindo algo que precisa de escala e resultado — vamos conversar.</h2>
+      <p class="section-label">Contato</p>
+      <h2 class="contact-headline">Se você está construindo algo que precisa de <em>escala e resultado</em> — vamos conversar.</h2>
       <p class="contact-sub">Aberta a conversas sobre liderança de Produto &amp; Design, transformação organizacional e uso estratégico de IA em empresas de médio e grande porte.</p>
       <span class="contact-availability">
         <span class="availability-dot"></span>
@@ -315,9 +329,9 @@
     <div class="contact-links reveal">
       <a href="mailto:julianavmveiga@gmail.com" class="contact-link">
         <div class="contact-link-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <rect x="2" y="5" width="16" height="11" rx="1" stroke="currentColor" stroke-width="1.3"/>
-            <path d="M2 6l8 6 8-6" stroke="currentColor" stroke-width="1.3"/>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <rect x="2" y="4" width="14" height="10" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M2 5l7 5 7-5" stroke="currentColor" stroke-width="1.2"/>
           </svg>
         </div>
         <div>
@@ -327,11 +341,11 @@
       </a>
       <a href="https://linkedin.com/in/juveiga" target="_blank" rel="noopener" class="contact-link">
         <div class="contact-link-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <rect x="2" y="2" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.3"/>
-            <line x1="7" y1="8.5" x2="7" y2="14" stroke="currentColor" stroke-width="1.3"/>
-            <line x1="7" y1="5.5" x2="7" y2="7" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M10 8.5v5.5M10 11c0-1.5 4-2 4 .5V14" stroke="currentColor" stroke-width="1.3"/>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <rect x="2" y="2" width="14" height="14" rx="1" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="6" y1="7.5" x2="6"  y2="12.5" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="6" y1="5.5" x2="6"  y2="6.5"  stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9 7.5v5M9 9.5c0-1.1 3-1.5 3 .5v2.5" stroke="currentColor" stroke-width="1.2"/>
           </svg>
         </div>
         <div>
@@ -341,9 +355,10 @@
       </a>
       <div class="contact-link">
         <div class="contact-link-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2a7 7 0 100 14A7 7 0 0010 2z" stroke="currentColor" stroke-width="1.3"/>
-            <path d="M10 16v2M2 10H0M20 10h-2" stroke="currentColor" stroke-width="1.3"/>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 2a6 6 0 100 12A6 6 0 009 2z" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M9 14v2M3 9H1M17 9h-2" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M9 5v4l2.5 2.5" stroke="currentColor" stroke-width="1.2"/>
           </svg>
         </div>
         <div>
@@ -357,7 +372,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Juliana Veiga — Produto &amp; Design Leadership</p>
+  <p>© 2025 Juliana Veiga — <span>Produto &amp; Design Leadership</span></p>
   <p>São Paulo, Brasil</p>
 </footer>
 
