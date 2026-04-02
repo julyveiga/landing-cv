@@ -1,74 +1,3 @@
-/* ── CANVAS HERO ─────────────────────────────────────────── */
-(function () {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, nodes = [];
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-
-  class Node {
-    constructor() { this.reset(); }
-    reset() {
-      this.x  = Math.random() * W;
-      this.y  = Math.random() * H;
-      this.vx = (Math.random() - 0.5) * 0.4;
-      this.vy = (Math.random() - 0.5) * 0.4;
-      this.r  = Math.random() * 1.5 + 0.5;
-    }
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > W) this.vx *= -1;
-      if (this.y < 0 || this.y > H) this.vy *= -1;
-    }
-  }
-
-  function init() {
-    resize();
-    nodes = Array.from({ length: 80 }, () => new Node());
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    nodes.forEach(n => n.update());
-
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx   = nodes[i].x - nodes[j].x;
-        const dy   = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 140) {
-          const alpha = (1 - dist / 140) * 0.35;
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(201,168,76,${alpha})`;
-          ctx.lineWidth   = 0.6;
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    nodes.forEach(n => {
-      ctx.beginPath();
-      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(201,168,76,0.6)';
-      ctx.fill();
-    });
-
-    requestAnimationFrame(draw);
-  }
-
-  init();
-  draw();
-  window.addEventListener('resize', resize);
-})();
-
-
 /* ── NAV SCROLL ──────────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -113,12 +42,12 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 });
 
 
-/* ── MODAL ───────────────────────────────────────────────── */
+/* ── MODAL DATA ──────────────────────────────────────────── */
 const caseData = {
   abinbev: {
     company: 'AB InBev',
-    title: 'CoE Global de Produto & Design para Zé Delivery e TaDa',
-    challenge: 'Construir do zero uma estrutura de Centro de Excelência capaz de operar em múltiplos países com consistência de processo, qualidade de produto e escala.',
+    title: 'Global Head Product & Design (CoE)',
+    challenge: 'Construir do zero um Centro de Excelência global de Produto & Design capaz de operar em múltiplos países com consistência de processo, qualidade e escala.',
     bullets: [
       'Estruturação completa do CoE — contratação, rituais, ferramentas e métricas',
       'Framework de maturidade de produto criado e aplicado como régua de evolução',
@@ -130,9 +59,9 @@ const caseData = {
     resultLabel: 'Índice de maturidade de produto em 18 meses',
   },
   natura: {
-    company: 'Natura',
-    title: 'Design System unificado para 3 marcas globais em 6 anos',
-    challenge: 'Depois da aquisição de Avon e The Body Shop, unificar a linguagem de design de 3 marcas com identidades distintas em uma infraestrutura compartilhada e escalável.',
+    company: 'Natura & Co',
+    title: 'Design System para 3 marcas globais em 6 anos',
+    challenge: 'Após a aquisição de Avon e The Body Shop, unificar a linguagem de design de 3 marcas com identidades distintas em uma infraestrutura compartilhada e escalável.',
     bullets: [
       'Design System criado e evoluído para cobrir Natura, Avon e The Body Shop',
       'Time de Design Ops estruturado para operar o sistema de forma autônoma',
@@ -144,8 +73,8 @@ const caseData = {
     resultLabel: 'com linguagem visual e operação de design consistentes',
   },
   unico: {
-    company: 'Unico (idtech)',
-    title: 'Design Operations do zero em empresa de identidade digital',
+    company: 'Unico ID Tech',
+    title: 'Design Operations do zero em idtech de alta escala',
     challenge: 'Em uma idtech de crescimento acelerado, criar a área de Design Operations sem estrutura prévia — e tornar o trabalho de design visível, mensurável e conectado ao negócio.',
     bullets: [
       'Área de Design Ops criada e organizada do zero',
@@ -158,7 +87,7 @@ const caseData = {
     resultLabel: 'dos problemas de experiência identificados e resolvidos antes da produção',
   },
   rd: {
-    company: 'Raia Drogasil (RD)',
+    company: 'Raia Drogasil',
     title: 'Primeira área de Design Operations no maior varejo farmacêutico do Brasil',
     challenge: 'Criar do zero a prática de Design Operations em uma empresa com mais de 2.500 lojas, conectando o trabalho de design a um negócio complexo, regulado e de alto volume.',
     bullets: [
@@ -176,7 +105,6 @@ const caseData = {
 function openModal(id) {
   const data = caseData[id];
   if (!data) return;
-
   document.getElementById('modalBody').innerHTML = `
     <p class="modal-company">${data.company}</p>
     <h2 class="modal-title">${data.title}</h2>
@@ -190,7 +118,6 @@ function openModal(id) {
     <p class="modal-result-big">${data.result}</p>
     <p class="modal-text" style="margin-top:0.5rem">${data.resultLabel}</p>
   `;
-
   document.getElementById('modalOverlay').classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -208,7 +135,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
 
-/* expose to HTML onclick attributes */
-window.openModal  = openModal;
-window.closeModal = closeModal;
+window.openModal         = openModal;
+window.closeModal        = closeModal;
 window.closeModalOutside = closeModalOutside;
